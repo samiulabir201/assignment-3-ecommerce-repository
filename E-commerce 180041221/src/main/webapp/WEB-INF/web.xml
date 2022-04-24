@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>ModifyCartServlet</servlet-name>
+        <servlet-class>com.example.ecommerce180041221.ModifyCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyCartServlet</servlet-name>
+        <url-pattern>/modifyCart</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>com.example.ecommerce180041221.loginFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
